@@ -25,20 +25,7 @@
 		<div class="canvas-close">
 			<i class="icon_close"></i>
 		</div>
-		<div class="search-icon  search-switch">
-			<i class="icon_search"></i>
-		</div>
 		<div class="header-configure-area">
-			<div class="language-option">
-				<img src="<?php echo get_template_directory_uri() ?>/img/flag.jpg" alt="">
-				<span>EN <i class="fa fa-angle-down"></i></span>
-				<div class="flag-dropdown">
-					<ul>
-						<li><a href="#">Zi</a></li>
-						<li><a href="#">Fr</a></li>
-					</ul>
-				</div>
-			</div>
 			<a href="#" class="bk-btn">Booking Now</a>
 		</div>
 		<nav class="mainmenu mobile-menu">
@@ -92,16 +79,6 @@
 								<a href="#"><i class="fa fa-instagram"></i></a>
 							</div>
 							<a href="#" class="bk-btn">Booking Now</a>
-							<div class="language-option">
-								<img src="<?php echo get_template_directory_uri() ?>/img/flag.jpg" alt="">
-								<span>EN <i class="fa fa-angle-down"></i></span>
-								<div class="flag-dropdown">
-									<ul>
-										<li><a href="#">Zi</a></li>
-										<li><a href="#">Fr</a></li>
-									</ul>
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -136,9 +113,6 @@
 									<li><a href="./contact.html">Contact</a></li>
 								</ul>
 							</nav>
-							<div class="nav-right search-switch">
-								<i class="icon_search"></i>
-							</div>
 						</div>
 					</div>
 				</div>
