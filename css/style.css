@@ -485,7 +485,7 @@ ol {
 	z-index: 1;
 }
 
-.menu-item .nav-menu .mainmenu li.active a:after {
+.menu-item .nav-menu .mainmenu li.current_page_item a:after {
 	opacity: 1;
 }
 
@@ -2785,4 +2785,21 @@ ol {
 
 .nav-menu .mainmenu li:last-child a {
 	margin-right: 0;
+}
+
+.tn-left li a {
+	color: #19191a;
+	transition: all 0.3s;
+}
+
+.tn-left li a:hover {
+	color: #dfa974;
+}
+
+.top-social a i {
+	transition: all 0.3s;
+}
+
+.top-social a:hover i {
+	color: #dfa974;
 }

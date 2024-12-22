@@ -11,10 +11,9 @@ get_header();
         <div class="row">
             <div class="col-lg-6">
                 <div class="hero-text">
-                    <h1>Sona A Luxury Hotel</h1>
-                    <p>Here are the best hotel booking sites, including recommendations for international
-                        travel and for finding low-priced hotel rooms.</p>
-                    <a href="#" class="primary-btn">Discover Now</a>
+                    <h1><?php the_field('hero_title') ?></h1>
+                    <p><?php the_field('hero_description') ?></p>
+                    <a href="<?php echo get_field('hero_btn')['url'] ?>" class="primary-btn"><?php echo get_field('hero_btn')['title'] ?></a>
                 </div>
             </div>
             <div class="col-xl-4 col-lg-5 offset-xl-2 offset-lg-1">
@@ -52,9 +51,17 @@ get_header();
         </div>
     </div>
     <div class="hero-slider owl-carousel">
-        <div class="hs-item set-bg" data-setbg="<?php echo get_template_directory_uri() ?>/img/hero/hero-1.jpg"></div>
-        <div class="hs-item set-bg" data-setbg="<?php echo get_template_directory_uri() ?>/img/hero/hero-2.jpg"></div>
-        <div class="hs-item set-bg" data-setbg="<?php echo get_template_directory_uri() ?>/img/hero/hero-3.jpg"></div>
+        <?php
+        if (have_rows('hero_slider')):
+            while (have_rows('hero_slider')) : the_row(); ?>
+
+                <div class="hs-item set-bg" data-setbg="<?php echo get_sub_field('hero_slider-img'); ?>"></div>
+
+        <?php endwhile;
+        else :
+            echo 'Ошибка: поля не найдены';
+        endif;
+        ?>
     </div>
 </section>
 <!-- Hero Section End -->

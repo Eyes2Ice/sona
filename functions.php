@@ -41,11 +41,10 @@ function sona_setup()
 	add_theme_support('post-thumbnails');
 
 	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus(
-		array(
-			'menu-1' => esc_html__('Primary', 'sona'),
-		)
-	);
+	register_nav_menus(array(
+		'header'    => 'Hedaer',    //Название месторасположения меню в шаблоне
+		'footer' => 'Footer'      //Название другого месторасположения меню в шаблоне
+	));
 
 	/*
 		* Switch default core markup for search form, comment form, and comments
@@ -117,3 +116,28 @@ function sona_scripts()
 add_action('wp_enqueue_scripts', 'sona_scripts');
 
 add_filter('show_admin_bar', '__return_false');
+
+if (function_exists('acf_add_options_page')) {
+
+	acf_add_options_page(array(
+		'page_title' 	=> 'Основные настройки',
+		'menu_title'	=> 'Настройки темы',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Настройки шапки',
+		'menu_title'	=> 'Header',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Настройки подвала',
+		'menu_title'	=> 'Footer',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+}
+
+
