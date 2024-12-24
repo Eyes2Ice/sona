@@ -18,34 +18,8 @@ get_header();
             </div>
             <div class="col-xl-4 col-lg-5 offset-xl-2 offset-lg-1">
                 <div class="booking-form">
-                    <h3>Booking Your Hotel</h3>
-                    <form action="#">
-                        <div class="check-date">
-                            <label for="date-in">Check In:</label>
-                            <input type="text" class="date-input" id="date-in">
-                            <i class="icon_calendar"></i>
-                        </div>
-                        <div class="check-date">
-                            <label for="date-out">Check Out:</label>
-                            <input type="text" class="date-input" id="date-out">
-                            <i class="icon_calendar"></i>
-                        </div>
-                        <div class="select-option">
-                            <label for="guest">Guests:</label>
-                            <select id="guest">
-                                <option value="">2 Adults</option>
-                                <option value="">3 Adults</option>
-                            </select>
-                        </div>
-                        <div class="select-option">
-                            <label for="room">Room:</label>
-                            <select id="room">
-                                <option value="">1 Room</option>
-                                <option value="">2 Room</option>
-                            </select>
-                        </div>
-                        <button type="submit">Check Availability</button>
-                    </form>
+                    <h3><?php the_field('booking-form_title') ?></h3>
+                    <?php echo do_shortcode('[contact-form-7 id="9aef05f" title="Booking form"]') ?>
                 </div>
             </div>
         </div>
@@ -73,25 +47,21 @@ get_header();
             <div class="col-lg-6">
                 <div class="about-text">
                     <div class="section-title">
-                        <span>About Us</span>
-                        <h2>Intercontinental LA <br />Westlake Hotel</h2>
+                        <span><?php the_field('about-us_subtitle') ?></span>
+                        <h2><?php the_field('about-us_title') ?></h2>
                     </div>
-                    <p class="f-para">Sona.com is a leading online accommodation site. We’re passionate about
-                        travel. Every day, we inspire and reach millions of travelers across 90 local websites in 41
-                        languages.</p>
-                    <p class="s-para">So when it comes to booking the perfect hotel, vacation rental, resort,
-                        apartment, guest house, or tree house, we’ve got you covered.</p>
-                    <a href="#" class="primary-btn about-btn">Read More</a>
+                    <p class="f-para"><?php the_field('about-us_description') ?></p>
+                    <a href="<?php echo get_field('about-us_btn')['url'] ?>" class="primary-btn about-btn"><?php echo get_field('about-us_btn')['title'] ?></a>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="about-pic">
                     <div class="row">
                         <div class="col-sm-6">
-                            <img src="<?php echo get_template_directory_uri() ?>/img/about/about-1.jpg" alt="">
+                            <img src="<?php echo get_field('about-us_first-image')['sizes']['about-us_custom'] ?>" alt="<?php echo get_field('about-us_first-image')['alt'] ?>">
                         </div>
                         <div class="col-sm-6">
-                            <img src="<?php echo get_template_directory_uri() ?>/img/about/about-2.jpg" alt="">
+                            <img src="<?php echo get_field('about-us_second-image')['sizes']['about-us_custom'] ?>" alt="<?php echo get_field('about-us_second-image')['alt'] ?>">
                         </div>
                     </div>
                 </div>

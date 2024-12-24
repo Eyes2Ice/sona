@@ -705,7 +705,7 @@ ol {
 	width: 100%;
 }
 
-.booking-form form button {
+.booking-form form input[type='submit'] {
 	display: block;
 	font-size: 14px;
 	text-transform: uppercase;
@@ -779,7 +779,7 @@ ol {
 }
 
 .about-text p.f-para {
-	margin-bottom: 10px;
+	margin-bottom: 35px;
 }
 
 .about-text p.s-para {
@@ -2796,10 +2796,31 @@ ol {
 	color: #dfa974;
 }
 
+.top-widget li a {
+	color: #19191a;
+	transition: all 0.3s;
+}
+
+.top-widget li a:hover {
+	color: #dfa974;
+}
+
 .top-social a i {
 	transition: all 0.3s;
 }
 
 .top-social a:hover i {
 	color: #dfa974;
+}
+
+.wpcf7-spinner {
+	display: none;
+}
+
+.booking-form form .check-date input.wpcf7-not-valid {
+	border: 1.5px solid #970606;
+}
+
+.wpcf7-not-valid-tip {
+	display: none;
 }

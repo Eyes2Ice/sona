@@ -140,4 +140,6 @@ if (function_exists('acf_add_options_page')) {
 	));
 }
 
+add_filter('wpcf7_autop_or_not', '__return_false');
 
+add_image_size('about-us_custom', 262, 372, true);
